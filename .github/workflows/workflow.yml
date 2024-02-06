@@ -10,5 +10,5 @@ jobs:
   Building:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Building the project"
-      - run: echo "Build complete"
+      - run: echo "Building the project ${{ secrets.MY_SECRET}}"
+      - run: echo "Build complete ${{ vars.testvariable }}"
