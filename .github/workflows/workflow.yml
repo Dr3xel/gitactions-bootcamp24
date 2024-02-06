@@ -8,6 +8,7 @@ jobs:
       - run: echo "This Action was triggered by a ${{ github.event_name }} event"
   
   Building:
+    needs: Exploring
     runs-on: ubuntu-latest
     steps:
       - run: echo "Building the project ${{ secrets.MY_SECRET}}"
