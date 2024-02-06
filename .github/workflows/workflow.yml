@@ -13,3 +13,11 @@ jobs:
     steps:
       - run: echo "Building the project ${{ secrets.MY_SECRET}}"
       - run: echo "Build complete ${{ vars.testvariable }}"
+  
+  Checkout:
+    needs: Building
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - run: echo "Checking out the code"
